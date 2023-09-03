@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../Container/Container";
 import Manubar from "./Manubar";
 import Link from "next/link";
@@ -8,9 +8,31 @@ import { BsFacebook } from 'react-icons/bs'
 import { BiLogoLinkedin } from 'react-icons/bi'
 
 const Navbar = () => {
-     const [Open, setOpen] = useState(true)
+     const [Open, setOpen] = useState(true);
+
+     const [show, setShow] = useState(false);
+
+     useEffect(() => {
+          const handleScroll = () => {
+               if (window.scrollY >= 100) {
+                    setShow(true);
+               } else {
+                    setShow(false);
+               }
+          };
+
+          window.addEventListener("scroll", handleScroll);
+
+          // Clean up the event listener when the component unmounts
+          return () => {
+               window.removeEventListener("scroll", handleScroll);
+          };
+     }, []);
      return (
-          <div className='px-2 w-full bg-[#fff] fixed py-3      top-0  left-0 right-0 z-50   shadow'>
+          <div className={`${
+               show ? "fixed shadow-lg duration-300 top-0" : ""
+             }  w-full  bg-[#ffff]  z-50  overflow-hidden  py-2`}
+          >
                <Container>
                     <div className=' '>
                          <div className=' flex justify-between items-center'>
@@ -25,7 +47,7 @@ const Navbar = () => {
                                    <div className="  inline-block  ">
                                         <div className=" flex  items-center gap-4">
                                              <Link className=" mx-2 text-[#1877F2]" target="_black" href={'https://www.facebook.com/nhidhosain'}><BsFacebook size={20}></BsFacebook></Link>
-                                             <Link className=" mx-2 text-[#4d8bdc]"  target="_black" href={'https://www.linkedin.com/in/nahid-hossain-8540ba255'}> <BiLogoLinkedin size={20}></BiLogoLinkedin></Link>
+                                             <Link className=" mx-2 text-[#4d8bdc]" target="_black" href={'https://www.linkedin.com/in/nahid-hossain-8540ba255'}> <BiLogoLinkedin size={20}></BiLogoLinkedin></Link>
 
                                         </div>
                                    </div>

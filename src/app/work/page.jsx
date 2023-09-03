@@ -5,18 +5,17 @@ const WorkPage = async () => {
           cache: 'no-cache'
      });
      const product = await res.json();
+     const projectData = product?.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
 
      return (
-          <div   className=' px-4 md:px-6 xl:px-10 my-16'>
-               <div className=' mt-10'>
-                    <h1 className=' text-3xl 2xl:text-4xl  font-bold text-center my-9'> My Work </h1>
-               </div>
+          <div className='px-2'>
 
                <div className=' grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2'>
-                   {
-                     product?.map(item=> <ProductCard key={item._id} card={item}></ProductCard>) 
-                   }
-               </div> 
+                    {
+                         product?.map(item => <ProductCard key={item._id} card={item}></ProductCard>)
+                    }
+               </div>
 
           </div>
      );

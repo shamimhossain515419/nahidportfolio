@@ -9,7 +9,9 @@ export default function Home() {
       <div>
 
         <Banner></Banner>
-        <VisitingCard></VisitingCard>
+        <div className=" my-24 ">
+          <VisitingCard></VisitingCard>
+        </div>
 
       </div>
 
