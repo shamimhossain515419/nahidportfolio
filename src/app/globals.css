@@ -8,20 +8,20 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.boxshadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.buttonBox {
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: .5s;
+
+}
+
+.buttonBox:hover {
+  background-color: #1a53ff;
+  color: white;
+  
 }
