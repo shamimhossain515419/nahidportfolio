@@ -1,7 +1,7 @@
 import ProductCard from "@/Component/ProductCard/ProductCard";
 
 const WorkPage = async () => {
-     const res = await fetch('http://localhost:5000/product', {
+     const res = await fetch('https://hahidportfolio.vercel.app/product', {
           cache: 'no-cache'
      });
      const product = await res.json();
