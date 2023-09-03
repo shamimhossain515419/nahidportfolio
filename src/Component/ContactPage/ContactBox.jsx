@@ -6,7 +6,7 @@ const ContactBox = () => {
      const sendEmail = (e) => {
           e.preventDefault();
           const from = e.target;
-console.log(from.name.value);
+          console.log(from.name.value);
           // emailjs.sendForm('service_3aw79ro', 'template_141fz2g', form.current, 'YDQbnPcNUrXTXhLlP')
           //      .then((result) => {
           //           if (result.text) {
@@ -18,7 +18,7 @@ console.log(from.name.value);
           //           toast(`${error.message}`)
           //      });
      };
-     
+
 
 
 

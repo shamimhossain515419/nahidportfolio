@@ -24,7 +24,7 @@ return (
 
                               <div className="  md:grid md:grid-cols-2 items-center md:gap-20">
                                    <div className="   p-1 md:p-4 ">
-                                        {/* <Image   width={1000}  className="  w-[500px]   mx-auto text-center p-1  md:p-4 h-[350px] object-contain"  src={contactImage} alt="" /> */}
+                                      
                                         <h1 className=" text-lg  md:text-xl  font-semibold"> Md: Nahid Hossain</h1>
                                         <h3 className=" text-lg font-semibold my-2 "> Graphic Designer</h3>
                                         <p className=" mt-4 text-lg "> I am available for freelance work. Connect with me via email and call into my account.</p>

@@ -1,10 +1,7 @@
+import GetProduct from "@/Utili/GetProduct";
 import Image from "next/image";
-import ProductCard from "../ProductCard/ProductCard";
 const VisitingCard = async () => {
-     const res = await fetch('https://hahidportfolio.vercel.app/product', {
-          cache: 'no-cache'
-     });
-     const product = await res.json();
+     const product = await GetProduct();
      const projectData = product?.sort((a, b) => new Date(b.date) - new Date(a.date));
 
      return (
@@ -20,7 +17,7 @@ const VisitingCard = async () => {
                               <div className=" grid md:grid-cols-3 gap-2 justify-center">
 
                                    {
-                                        product?.slice(0, 3).map(item =>
+                                        projectData?.slice(0, 3).map(item =>
                                              <div key={item._id} className=" cursor-pointer relative  w-full   ">
                                                   <Image width={500} height={500} className=" w-[500px]   relative object-contain  " src={item?.img} alt=""></Image>
                                                   <div className=" top-0 duration-300  absolute hover:bg-[#00000093] w-full h-full ">
