@@ -25,3 +25,15 @@
   color: white;
   
 }
+.contactButton {
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: .5s;
+
+}
+
+.contactButton:hover {
+  background-color: #582ad8;
+  color: white;
+  
+}
