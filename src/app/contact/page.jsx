@@ -1,4 +1,4 @@
-'use client'
+
 import ContactBox from '@/Component/ContactPage/ContactBox';
 import Container from '@/Component/Container/Container';
 import React from 'react';

@@ -7,6 +7,10 @@ module.exports = {
                     protocol: "https",
                     hostname: "i.ibb.co",
                },
+               {
+                    protocol: "https",
+                    hostname: "img.freepik.com",
+               },
           ],
      },
 };

@@ -21,10 +21,7 @@ export default function RootLayout({ children }) {
           <div className='  mt-20'>
             {children}
           </div>
-          <Link className={'  fixed bottom-10 right-10  z-50'} target="_blank" href={'https://api.whatsapp.com/send/?phone=880176582222494'}>
-            <BsWhatsapp className=' text-[35px] md:text-[70px] text-[#008E0F]'></BsWhatsapp>
-          </Link>
-        </div>
+       </div>
       </body>
     </html>
   )

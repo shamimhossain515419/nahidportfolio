@@ -4,7 +4,7 @@ import Container from "../Container/Container";
 import Manubar from "./Manubar";
 import Link from "next/link";
 import { FaBars } from 'react-icons/fa'
-import { BsFacebook } from 'react-icons/bs'
+import { BsFacebook, BsWhatsapp } from 'react-icons/bs'
 import { BiLogoLinkedin } from 'react-icons/bi'
 
 const Navbar = () => {
@@ -29,9 +29,8 @@ const Navbar = () => {
           };
      }, []);
      return (
-          <div className={`${
-               show ? "fixed shadow-lg duration-300 top-0" : ""
-             }  w-full  bg-[#ffff]  z-50  overflow-hidden  py-2`}
+          <div className={`${show ? "fixed shadow-lg duration-300 top-0" : ""
+               }  w-full  bg-[#ffff]  z-50  overflow-hidden  py-2`}
           >
                <Container>
                     <div className=' '>
@@ -48,7 +47,9 @@ const Navbar = () => {
                                         <div className=" flex  items-center gap-4">
                                              <Link className=" mx-2 text-[#1877F2]" target="_black" href={'https://www.facebook.com/nhidhosain'}><BsFacebook size={20}></BsFacebook></Link>
                                              <Link className=" mx-2 text-[#4d8bdc]" target="_black" href={'https://www.linkedin.com/in/nahid-hossain-8540ba255'}> <BiLogoLinkedin size={20}></BiLogoLinkedin></Link>
-
+                                             <Link className={" mx-2 text-[#4d8bdc]"} target="_blank" href={'https://api.whatsapp.com/send/?phone=880176582222494'}>
+                                                  <BsWhatsapp size={20} className=' text-[16px] md:text-[70px] text-[#279933]'></BsWhatsapp>
+                                             </Link>
                                         </div>
                                    </div>
                               </div>
